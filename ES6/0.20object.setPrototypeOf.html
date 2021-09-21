@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 可以在创建对象然后在改变对象的
+    let pink = {
+      getDrink() {
+        return 'lala';
+      }
+    };
+
+    let yeye = {
+      getDrink() {
+        return 'jiji';
+      }
+    };
+    
+    let sunday = Object.create(pink);
+    console.log(sunday.getDrink());
+    console.log(Object.getPrototypeOf(sunday) === pink);
+
+Object.setPrototypeOf(sunday,dinner);
+console.log(sunday.getDrink());
+console.log(Object.getPrototypeOf(sunday) === dinner);
+
+  </script>
+</body>
+</html>

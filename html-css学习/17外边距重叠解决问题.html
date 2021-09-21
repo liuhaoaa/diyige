@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+
+<style>
+.box1{
+  width: 200px;
+  height: 200px;
+  background-color: #bbffaa;
+}
+/* .box1::before{
+  content: '';
+  display: table;
+} */
+.box2{
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  margin-top: 100px;
+}
+
+/* clearfix 这个样式可以同时解决高度塌陷和外边距重叠的问题 */
+
+/* 选中元素最前 */
+.clearfix::before,
+/* 选中元素最后 */
+.clearfix::after{
+  /* 添加一个空内容 */
+  content: '';
+  /* 显示为一个表格 */
+display: table;
+}
+
+</style>
+<body>
+  <div class="box1 clearfix">
+    <div class="box2"></div>
+  </div>
+</body>
+</html>

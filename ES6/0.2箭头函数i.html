@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 1. 如果只有一个参数，圆括号()可以省略 
+    // 2. 如果只有一个 return, {} 可以省略
+
+    // window.onload = function() {
+    //   alert('abc');
+    // }
+
+// window.onload =()=>{
+//       alert('abc');
+// }
+
+// let show=function() {
+//   alert('abc');
+// };
+
+// let show=()=>{
+//     alert('abc');
+//   };
+// show();
+
+// 也可以传参
+// let show=function (a,b){
+//   alert(a+b);
+// }
+// show(12,4);
+
+// let show=(a,b)=>{
+//   alert(a+b);
+// }
+// show(12,4);
+
+
+// let arr=[12,3,45,67,43,78,2];
+// arr.sort(function (n1,n2){
+//   return n1-n2;
+// });
+
+// let arr=[12,3,45,67,43,78,2];
+// arr.sort((n1,n2)=>{
+//   return n1-n2;
+// });
+// alert(arr);
+
+// 圆括号可以省略
+// let show=function(a){
+//   return a*2;
+// }
+// alert(show(12));
+
+// let show=a=>a*2;
+// alert(show(12));
+
+let arr=[12,3,45,67,43,78,2];
+arr.sort((n1,n2)=>n1-n2);
+alert(arr);
+  </script>
+</body>
+</html>

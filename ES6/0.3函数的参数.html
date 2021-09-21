@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 函数的参数
+    // 1. 参数扩展/数组展开
+    // 2. 默认参数
+
+    // 参数扩展
+    // 1. 搜集剩余的参数
+    // function show(a,b,...aaa){}   ...后面跟什么都行 名字随便取
+    // 注意的点 必须放在最后一个
+    //     function show(a,b,...aaa) {
+    // alert(a);
+    // alert(b);
+    // alert(aaa);
+    //     }
+    //     show(12,15,8,9,20);
+
+
+    // 展开一个数组
+    // 展开后的效果，跟直接把数组的内容写在这用一样
+    // (1)
+    // let arr = [1, 2, 3]
+    // function show(a, b, c) {
+    //   alert(a);
+    //   alert(b);
+    //   alert(c);
+    // }
+    // // ...arr  = 1,2,3
+    // // show(1,2,3)
+    // show(...arr);
+
+    // (2)
+    // let arr1 = [1, 2, 3];
+    // let arr2 = [4,5,6];
+    // let arr = [...arr1,...arr2]; 
+    // alert(arr);
+
+    // (3)
+    // function show(...args){
+    //   fn(...args);
+    // }
+    // function fn(a,b){
+    //   alert(a+b);
+    // }
+    // show(12,5)
+
+    // 2. 默认参数
+    function show(a, b=12,c=20){
+      console.log(a,b,c);
+    }
+    show(16,88,99);
+  </script>
+</body>
+
+</html>

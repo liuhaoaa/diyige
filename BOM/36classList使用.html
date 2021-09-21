@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .bg {
+        background-color: black;
+    }
+</style>
+
+<body>
+    <div class="noe two"></div>
+    <button>开关灯</button>
+    <script>
+        // console.log 返回元素的类名
+        // div.classlist  ie10 以上才可以用，不过移动端布局不影响
+        var div = document.querySelector('div');
+        // 1. 添加类名  是在后面追加类名不会发覆盖以前的类名  注意前面不需要加点
+        div.classList.add('three');
+        // 2. 删除类名
+        div.classList.remove('noe');
+        // 3. 切换类 （简单理解 有这个类给你删除 没有这个类给你添加）
+        var btn = document.querySelector('button');
+        btn.addEventListener('click', function() {
+            document.body.classList.toggle('bg');
+        })
+    </script>
+</body>
+
+</html>

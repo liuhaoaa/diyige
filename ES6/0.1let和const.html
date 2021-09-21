@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // var 
+    // 1. 可以重复声明
+    // 2. 无法限制修改
+    // 3. 没有块级作用域 if  for 
+// 1.
+//     var i = 1;
+
+//     var i = 5;
+// alert(i);
+
+// 3. 
+// if (true) {
+//   var a = 12;
+// }
+// alert(a);
+
+// let  不能重复声明   变量 可以修改  块级作用域
+// const 不能重复声明  常量 不能修改  块级作用域
+
+// let a = 2;        let a = 12;             if(true){
+// let a = 4;        a = 5;                   let a = 12;
+// alert(a);         alera(a);  可以修改      }
+//                                             alert(a); 
+
+// const a = 12;     const a = 12;              if(true){
+// const a= 3;       a = 2;                      const a = 12;
+// alert(a);         alera(a);   不能修改         }
+//                                               alert(a); 
+  </script>
+</body>
+</html>

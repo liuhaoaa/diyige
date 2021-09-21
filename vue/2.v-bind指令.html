@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .active {
+    background: #a10;
+  }
+</style>
+<body>
+  <!-- v-bind 是用于绑定数据和元素属性的   可以绑定图片 div 和类-->
+  <div id="app">
+    <a :class="{active: isActive}" v-bind:href="url">点我
+      <!-- <img v-bind:src="img"> -->
+    </a>
+  </div>
+  <script src="./vue.js"></script>
+  <script src="./2v-bind指令.js"></script>
+</body>
+</html>

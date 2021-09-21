@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // filter  过滤器(留一部分，删一部份)
+    // let arr = [12,5,8,99,27,36,75,11];
+
+    // let result = arr.filter(item=>item%3==0);
+    // alert(result);
+    
+    // let arr = [
+    //   {title:'男士衬衫',price:75},
+    //   {title:'女士包',price:67858},
+    //   {title:'男士鞋',price:65},
+    //   {title:'女生衬衫',price:97885},
+    // ];
+    // let result = arr.filter(json=>json.price>=10000);
+    // console.log(result);
+
+    const nums = [10,20,30,111,222,666,99,77]
+    let nueNums = nums.filter(function(n){
+      return n < 100
+    })
+    console.log(nueNums);
+
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- v-model 所有用户的指令都要通过 -->
+  <div id="app">
+  <input type="text" v-model.number="price">  <!--  lazy好处是当用户输入完了才会验证用户输入的数据 -->
+  {{price}}                                  <!--  taim好处是用户输入的值前后的空格都会去掉 -->
+</div>                       <!--  number用来表示价钱、年龄等用数字表示的 number不用转换直接是数字类型 -->
+  <script src="./vue.js"></script>
+  <script src="./4v-model指令.js"></script>
+</body>
+</html>

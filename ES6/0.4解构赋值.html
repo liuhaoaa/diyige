@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<script>
+  // 解构赋值：
+  // 1. 左右两边结构必须一样
+  // 2. 左右必须是个东西
+  // 3. 声明和赋值不能分开(必须再一句话里完成)
+
+  // let [a,b,c] = [1,2,3];
+  // console.log(a,b,c);
+
+  // let {a,b,c} = {a:12,b:32,c:39};
+  // console.log(a,b,c);
+
+  let [{a,b},[n1,n2,n3],num,str] = [{a:12,b:5},[12,5,8],8,'cxzcv'];
+  console.log(a,b,n1,n2,n3,num,str);
+</script>
+</body>
+</html>

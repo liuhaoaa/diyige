@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .imgg {
+        position: relative;
+        height: 590px;
+        border: 1px solid #ccc;
+    }
+    
+    .mask {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 300px;
+        height: 300px;
+        background-color: #fede4f;
+        opacity: .5;
+        border: 1px solid #ccc;
+        /* 让鼠标变成四角形 */
+        cursor: move;
+    }
+    
+    .big {
+        display: none;
+        position: absolute;
+        left: 600px;
+        top: 0px;
+        width: 800px;
+        height: 600px;
+        border: 1px solid #ccc;
+        overflow: hidden;
+    }
+    
+    .big img {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+</style>
+
+<body>
+    <div class="imgg">
+        <img src="../练习图片/5.webp" alt="">
+        <div class="mask"></div>
+        <div class="big"><img src="../练习图片/5.webp" alt="" class="bigImg"></div>
+    </div>
+    <script>
+        window.addEventListener('load', function() {
+            var imgg = document.querySelector('.imgg');
+            var mask = document.querySelector('.mask');
+            var big = document.querySelector('.big');
+            // 1. 当我们鼠标经过 imgg 就显示和隐藏 mask 遮挡层 和 big 大盒子
+            imgg.addEventListener('mouseover', function() {
+                mask.style.display = 'block';
+                big.style.display = 'block';
+            })
+            imgg.addEventListener('mouseout', function() {
+                mask.style.display = 'none';
+                big.style.display = 'none';
+            })
+            imgg.addEventListener('mousemove', function(e) {
+                //  (1) 先计算出鼠标在盒子内的坐标
+                var x = e.pageX - this.offsetLeft;
+                var y = e.pageY - this.offsetTop;
+                // (2) 盒子高度300 的一半是150
+                // (3) 我们mask 移动的距离
+                var maskX = x - mask.offsetWidth / 2;
+                var maskY = y - mask.offsetHeight / 2;
+                // (4) 如果x坐标小于了0 就让他停在0的位置
+                if (maskX <= 0) {
+                    maskX = 0;
+                } else if (maskX >= 290) {
+                    maskX = 290;
+                }
+                // if (maskX <= 0) {
+                //     maskX = 0;
+                // } else if (maskX >= imgg.offsetWidth - mask.offsetWidth) {
+                //     maskX = imgg.offsetWidth - mask.offsetWidth;
+                // } 这样写最好
+                if (maskY <= 0) {
+                    maskY = 0;
+                } else if (maskY >= 290) {
+                    maskY = 290;
+                }
+                // if (maskY <= 0) {
+                //     maskY = 0;
+                // } else if (maskY >= imgg.offsetHeight - mask.offsetHeight) {
+                //     maskY = imgg.offsetHeight - mask.offsetHeight;
+                // }这样写最好
+                mask.style.left = maskX + 'px';
+                mask.style.top = maskY + 'px';
+                // 3. 大图片的移动距离 = 遮挡层移动距离 * 大图片最大移动距离 / 遮挡层的最大移动距离
+                var maskMax = imgg.offsetWidth - mask.offsetWidth;
+                // 遮挡层最大的移动距离
+                var bigImg = document.querySelector('.bigImg');
+                // 大图片最大移动距离
+                var bigMax = bigImg.offsetWidth - big.offsetWidth;
+                var bigX = maskX * bigMax / maskMax;
+                var bigY = maskY * bigMax / maskMax;
+                bigImg.style.left = -bigX + 'px';
+                bigImg.style.top = -bigY + 'px';
+            })
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+  <!--  1. v-for指令的作用是：根据数据生成列表结构 
+        2. 数据经常和v-for结合使用 
+        3. 语法是(item,index)in数据
+        4. item 和 index 可以结合其他指令一起使用
+        5. 数据长度的更新会同步到页面上，是响应式的
+  -->
+  <div id="app">
+    <input type="button" value="新增数据" @click="add">
+    <input type="button" value="移除数据" @click="remove">
+    <ul>
+      <li v-for="(it,index) in arr">
+        {{ index+1 }}刘昊大帅哥:{{ it }}
+      </li>
+    </ul>
+    <h2 v-for="item in vegetables" v-bind:title="item.name">
+      {{ item.name }}
+    </h2>
+  </div>
+  <script>
+    var app = new Vue({
+      el: "#app",
+      data:{
+        arr: ["北京", "上海", "广州", "深圳"],
+        vegetables: [
+          {name:"西兰花炒蛋"},
+          {name:"蛋炒西兰花"}
+        ]
+      },
+      methods:{
+        add:function(){
+          this.vegetables.push({ name:"花菜炒蛋" })
+        },
+        remove:function(){
+          this.vegetables.shift();
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>

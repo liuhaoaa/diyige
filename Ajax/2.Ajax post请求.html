@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>发送请求</button>
+    <!-- 
+        什么是Ajax
+        AJAX 是与服务器交换数据并更新部分网页的艺术，在不重新加载整个页面的情况下。
+    -->
+    <script>
+        var oBtn = document.querySelector("button")
+        oBtn.onclick = function() {
+            var xhr;
+            if (window.XMLHttpRequest) { // code for IE7+, Firefox, Chrome, Opera, Safari
+                xhr = new XMLHttpRequest();
+            } else { // code for IE6, IE5
+                xhr = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            // var xhr = new XMLHttpRequest();
+            xhr.open("post", "1.php", true);
+            xhr.srtRequestHeader('Content-Type','application/x-www-urlencoded')
+            xhr.send('name=zhangsan&age=18');
+            xhr.onreadystatechange = function() {
+                    if (xhr.readyState === 4) {
+                        // 判断是否请求成功
+                        if (xhr.status >= 200 && xhr.status < 300 || xhr.status === 304) {
+                            // responseText 获得字符串形式的响应数据
+                            alert(xhr.responseText);
+                        } else {
+                            alert("请求失败");
+                        }
+                    }
+                }
+                // 5. 返回处理的结果
+        }
+    </script>
+</body>
+
+</html>

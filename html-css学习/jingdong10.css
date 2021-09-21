@@ -1,0 +1,139 @@
+.box1 {
+  font: 14px/1.5 Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
+}
+a:hover{
+  text-decoration: none;
+}
+.topnav {
+  width: 100%;
+  height: 40px;
+  background-color: #333;
+}
+.topnav_h {
+  width: 1226px;
+  height: 40px;
+  background-color: #b0b0b0;
+  margin: 0 auto;
+}
+.topnav_l {
+  float: left;
+}
+.topnav_l li{
+  display: inline-block;
+  line-height: 40px;
+}
+.topnav_l li:nth-child(even){
+  width: 1px;
+  height: 12px;
+  background-color: #666;
+  margin: 9px 3px 0;
+}
+.topnav_r {
+  float: right;
+  line-height: 40px;
+  /* display: inline-block; */
+}
+.topnav_r ul li{
+  display: inline-block;
+}
+.topnav_r li:nth-child(even){
+  width: 1px;
+  height: 12px;
+  background-color: #666;
+  margin: 9px 3px 0;
+}
+.topnav_g {
+  display: inline-block;
+  text-align: center;
+  width: 120px;
+  height: 40px;
+  background-color: pink;
+}
+.subnav {
+  width: 1226px;
+  height: 100px;
+  background-color: #bfa;
+  margin: 0 auto;
+  position: relative;
+}
+.subnav_img {
+  width: 55px;
+  height: 55px;
+  background-color: orangered;
+  position: absolute;
+  top: 22.5px;
+  left: 0px;
+}
+.subnav_nav {
+  position: absolute;
+  top: 20px;
+  left: 170px;
+}
+.subnav_nav ul {
+  display: flex;
+}
+.subnav_nav ul li a {
+  display: inline-block;
+  color: #333;
+  font-size: 16px;
+  padding: 20px 10px;
+}
+.subnav_r {
+  position: absolute;
+  top: 25px;
+  right: 0;
+  border: 1px solid #000;
+}
+.subnav_sreachbox{
+  width: 300px;
+  height: 50px;
+  padding: 0 10px;
+  border: none;
+  float: left;
+  outline: none;
+}
+.subnav_btn {
+  width: 50px;
+  height: 50px;
+  border: none;
+  float: left;
+  border-left: 1px solid #000;
+  outline: none;
+  cursor: pointer;
+}
+.mainnav {
+  width: 1226px;
+  height: 460px;
+  margin: 0 auto;
+  background-color: pink;
+}
+.mainnav_img {
+  background-image: url(./练习图片/xiaomi.webp);
+}
+.mainnav_l {
+  width: 234px;
+  height: 420px;
+  background-color: rgba(105, 101, 101, .6);
+  padding: 20px 0px;
+  overflow: hidden;
+}
+.mainnav_l ul li{
+  width: 234px;
+  height: 42px;
+  font-size: 14px;
+  text-align: left;
+  line-height: 42px;
+  padding-left: 30px;
+  /* background-color: salmon; */
+}
+.mainnav_l ul li a {
+  display: block;
+  color: #fff;
+  font-size: 14px;
+}
+.mainnav_l ul li:hover {
+  background-color: #ff6700;
+}
+.mainnav_l ul li a:hover {
+  text-decoration: none;
+}

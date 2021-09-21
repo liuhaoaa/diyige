@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./chongzhi.css">
+  <style>
+    .guild_boo {
+      width: 200px;
+      height:150px;
+      background-color: pink;
+      margin: 50px auto;
+
+    }
+    .guild_boo a {
+      display: inline-block;
+      height: 20px;
+      width: 1000px;
+      margin-left: 15px;
+      white-space: nowrap;
+    /* 2.溢出的部分隐藏起来 */
+    overflow: hidden;
+    /* 3. 文字溢出的说话用省略号来显示 */
+    text-overflow: ellipsis;
+    }
+  </style>
+</head>
+<body>
+  <ul class="guild_boo">
+    <li>
+      <a href="#">生活要有仪式感啊啊啊a a  </a>
+    </li>
+    <li>
+      <a href="#">生活要有仪式感，那你去死吧aaaaaa </a>
+    </li>
+    <li>
+      <a href="#">生活要有仪式感，那你去死吧</a>
+    </li>
+    <li>
+        <a href="#">生活要有仪式感，那你去死吧</a>
+    </li>
+    </ul>
+</body>
+</html>

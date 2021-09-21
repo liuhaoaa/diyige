@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div {
+        width: 300px;
+        height: 300px;
+        background-color: pink;
+    }
+</style>
+
+<body>
+    <div></div>
+    <script>
+        var div = document.querySelector('div')
+            // resize 重置尺寸的意思 调整窗口大小加载事件，当出发时就调用的处理函数
+        window.addEventListener('resize', function() {
+            console.log(window.innerWidth);
+            console.log('变化了');
+
+            if (window.innerWidth <= 800) {
+                div.style.display = 'none';
+            } else {
+                div.style.display = 'block';
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .sliderbar {
+        position: relative;
+        position: absolute;
+        top: 100px;
+        right: 0;
+        height: 40px;
+        width: 40px;
+        background-color: yellow;
+    }
+    
+    .con {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 200px;
+        height: 40px;
+        background-color: rebeccapurple;
+        z-index: -1;
+    }
+</style>
+<script src="./30animate.js"></script>
+
+<body>
+
+    <div class="sliderbar">
+        <span>←</span>
+        <div class="con">反馈问题</div>
+    </div>
+    <script>
+        var sliderbar = document.querySelector('.sliderbar');
+        var con = document.querySelector('.con');
+        // 当我们鼠标经过 sliderbar 就会让 con这个盒子滑动到左侧
+        // 当我们鼠标离开 sliderbar 就会让 con这个盒子滑动到右侧
+        sliderbar.addEventListener('mouseenter', function() {
+            // animate(obj, target, callback);
+            animate(con, -160, function() {
+                // 当我们动画执行完毕 就把 ← 箭头改为 →
+                sliderbar.children[0].innerHTML = '→';
+            });
+        });
+        sliderbar.addEventListener('mouseleave', function() {
+            // animate(obj, target, callback);
+            animate(con, 0, function() {
+                sliderbar.children[0].innerHTML = '←';
+            });
+        })
+    </script>
+</body>
+
+</html>

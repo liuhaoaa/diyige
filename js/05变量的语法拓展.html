@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1. 更新变量 一个变量被重新赋值之后，它原有的值就会被覆盖，变量值将以最后一次赋值为准
+        var maname = '刘昊大王';
+        console.log(maname);
+        maname = '拉拉大王';
+        console.log(maname);
+        // 2.声明多个变量
+        // var age =18; 
+        // var address = 'lalal';
+        // var gz = 2000;
+        var age = 18,
+            address = 'lalal',
+            gz = 2000;
+        // 3. 声明变量的特殊情况
+        // 3.1 只声明不赋值 结果是? 程序也不知道里面存的是什么 所以是 undefined
+        var sex;
+        console.log(sex) // undefined
+            // 3.2  不声明 不赋值 直接使用某个变量会报错
+        console.log(lalal)
+            // 3.3 不声明直接赋值使用 不合规
+        qq = 100;
+        console.log(qq);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

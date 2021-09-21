@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // generator中文生成的意思   
+    // 普通函数——一路到底
+    // generator函数中间能停  “踹一脚走一步”     不能写成箭头函数的模式
+    function *show() {
+      alert('a');
+      
+      yield;
+
+      alert('b');
+    }
+    let genObj = show();
+    genObj.next();
+    genObj.next(); 
+  </script>
+</body>
+</html>

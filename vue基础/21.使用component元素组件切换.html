@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script> 
+</head>
+<body>
+  <component id="app">
+    <a href="" @click.prevent="comName='login'">登录</a>
+    <a href="" @click.prevent="comName='register'">注册</a>
+<!-- component 来展示对应名称的组件  -->
+<!-- component 是一个占位符 :is 属性可以用来指定要展示的组件的名称 -->
+    <component :is="comName"></component>
+  </div>
+  <script>
+    Vue.component('login',{
+      template:'<h3>登录组件</h3>'
+    })
+
+    Vue.component('register',{
+      template:'<h3>注册组件</h3>'
+    })  
+
+    var vm = new Vue({
+      el:'#app',
+      data:{
+        comName:'login'
+      },
+      methods:{}
+    }) 
+  </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>发送请求</button>
+    <!-- 
+        什么是Ajax
+        AJAX 是与服务器交换数据并更新部分网页的艺术，在不加载整个页面的情况下
+    -->
+    <script>
+        var oBtn = document.querySelector('button')
+        oBtn.onclick = function() {
+            // 1. 创建一个异步对象
+            var xmlhttp = new XMLHttpRequest();
+            // 2. 设置请求方式和请求地址  
+            // 2.(1) open的方式
+            // method： 请求的类型； GET 或 POST
+            // url： 文件在服务器上的位置
+            // async： true（ 异步） 或 false（ 同步）
+            // xmlhttp.open('提交的方式', '提交的地址', 是否需要发送异步任务);
+            xmlhttp.open('GET', '1.php', true);
+            // 3. 发送请求
+            xmlhttp.send();
+            // 4. 监听状态的变化
+            xmlhttp.onreadystatechange = function() {
+                    // 0: 请求未初始化
+                    // 1: 服务器连接已建立
+                    // 2: 请求已接收
+                    // 3: 请求处理中 
+                    // 4: 请求已完成，且响应已就绪 （监听第四步）
+                    if (xmlhttp.readyState === 4) {
+                        // 判断是否请求成功
+                        if (xmlhttp.status >= 200 && xmlhttp.status < 300 || xmlhttp.status === 304) {
+                            console.log('接收到了服务器的数据');
+                        } else {
+                            console.log('没有接收到了服务器的数据');
+                        }
+                    }
+                }
+                // 5. 返回处理的结果
+        }
+    </script>
+</body>
+
+</html>

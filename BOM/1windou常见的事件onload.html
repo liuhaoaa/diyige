@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // window.onload = function() {
+        //     var btn = document.querySelector('button')
+        //     btn.addEventListener('click', function() {
+        //         alert('点击');
+        //     })
+        // }
+
+        window.addEventListener('load', function() {
+            var btn = document.querySelector('button')
+            btn.addEventListener('click', function() {
+                alert('点击');
+            })
+        })
+        window.addEventListener('load', function() {
+            alert(22);
+        })
+        document.addEventListener('DOMContentLoaded', function() {
+            alert(33);
+        })
+
+        // load 就可以把js代码写到页面元素的上方，因为onload是等页面全部加载完毕，再去执行里面函数
+        // DOMContentLoaded 是DOM 加载完毕 不包含图片 falsh css 等就可以执行 加载速度比load快
+    </script>
+    <button> 点击 </button>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 九九乘法表
+        // 一功有9行 但是每行的个数不一样 因此需要用到 for 循环
+        // 外层 for 循环 控制行数 i ，循环9次，可以打印 9 行
+        // 内层 for 循环控制每行公式 j
+        // 核心算法：每一行 公式的个数正好和行数一致，就<=i;
+        // 每行打印完毕，都需要重新换一行
+        var str = '';
+        for (var i = 1; i <= 9; i++) { // 外层循环控制的是行数
+            for (var j = 1; j <= i; j++) { // 里层循环控制每一行的个数 j <= i
+                str += j + '×' + i + '=' + i * j + '\t';
+            }
+            str = str + '\n';
+        }
+        console.log(str)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

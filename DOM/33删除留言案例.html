@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    textarea {
+        width: 200px;
+        height: 200px;
+        border: 1px solid pink;
+    }
+    
+    ul li {
+        width: 250px;
+        background-color: pink;
+    }
+    
+    li a {
+        float: right;
+    }
+</style>
+
+<body>
+    <textarea name="" id=""></textarea>
+    <button>发布</button>
+    <ul>
+        <!-- <li>123</li> -->
+    </ul>
+    <script>
+        // 1. 获取元素
+        var btn = document.querySelector('button');
+        var text = document.querySelector('textarea');
+        var ul = document.querySelector('ul');
+        // 2. 注册事件
+        btn.onclick = function() {
+            if (text.value == '') {
+                alert('您没有输入内容');
+                return false;
+            } else {
+                // (1) 创建元素
+                var li = document.createElement('li');
+                // 现有li 才能赋值
+                li.innerHTML = text.value + "<a href='javascript:;'>删除</a>";
+                // (2) 添加元素 
+                // ul.appendChild(li);
+                ul.insertBefore(li, ul.children[0]);
+                // (3) 删除元素 删除的是当前元素链接的li 它的父亲
+                var as = document.querySelectorAll('a');
+                for (var i = 0; i < as.length; i++) {
+                    as[i].onclick = function() {
+                        // node.removeChild(child); 删除的是li当前a所在的li  this.parentNode;
+                        ul.removeChild(this.parentNode);
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

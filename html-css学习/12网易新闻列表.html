@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./chongzhi.css">
+
+
+
+  <style>
+    a{
+      /* 统一去除下划线 */
+      text-decoration: none;
+    }
+
+    /* 设置容器的样式 */
+    .news-wrapper{
+      /* 设置宽度 */
+      width: 300px;
+      /* 设置高度 */
+      height: 358px;
+      /* 设置上边框 */
+      border: 1px solid #ddd;
+    }
+
+    /* 设置news-title */
+    .news-title{
+      /* 设置字体高度 */
+      height: 30px;
+      /* 为了边框和文字宽度一致，需要将h2转换成为行内元素 */
+      display: inline-block;
+      /* 设置上边框 */
+      border-top: 1px red solid;
+      /* 通过margin-top将h2上移，盖住上边的边框 */
+      margin-top: -1px;
+  
+      padding-top: 10px;
+    }
+  
+    /* 设置title中超链接的样式 */
+    .news-title a{
+      /* 去除下划线 */
+      text-emphasis: none;
+      /* 字体颜色 */
+      color: #40406b;
+      /* 设置文字的加粗效果 */
+      font-weight: bold;
+    }
+  
+  /* 设置图片文字的高度 */
+  .news-img{
+    height: 150px;
+  }
+  
+    /* 设置图片的文字效果 */
+    .news-img .img-title{
+      /* 向上移动文字 */
+      margin-top: -30px;
+      /* 设置字体颜色色 */
+      color: #fff;
+      /* 设置加粗 */
+      font-weight: bold;
+      /* 设置padding */
+      padding-left: 30px;
+    }
+  
+  
+  
+    /* 设置新闻列表 */
+    .nuws-list{
+      /* 设置上外边距 */
+      margin-top: 20px;
+      /* 设置左侧的paddingS */
+      padding-bottom: 14px;
+  
+    }
+      /* 设置li */
+      .nuws-list li{
+        margin-bottom: 17px;
+      }
+      
+      /* 设置li中的文字 */
+      .nuws-list li a{
+        /* 设置字体大小 */
+        font-size: 14px;
+         /* 设置字体颜色 */
+        color: #666;
+      }
+  
+      .nuws-list li a:hover{
+        color: red;
+        text-decoration: none;
+      }
+  </style>
+  
+</head>
+
+
+
+
+<body>
+
+  <!-- 创建新闻列表的外侧的容器 -->
+  <div class="news-wrapper">
+    <!-- 创建一个标题标签 -->
+    <h2 class="news-title">
+      <a href="#">体育</a>
+    </h2>
+
+
+    <!-- 创建一个图片容器 -->
+    <div class="news-img">
+      <a href="#">
+        <img src="./练习图片/4.webp" alt="">
+        <!-- 创建图片标题 -->
+        <h3 class="img-title">
+          我是你爸爸呀我是你爸爸
+        </h3>
+      </a>
+    </div>
+    <!-- 新闻列表 -->
+    <ul class="nuws-list">
+      <li>
+        <a href="#">我们一起愉快的玩耍呀</a>
+      </li>
+      <li>
+        <a href="#">我是午夜dj是dj</a>
+      </li>
+      <li>
+        <a href="#">今天天气很晴朗</a>
+      </li>
+      <li>
+      <a href="#">我好想拉屎啊啊啊啊</a>
+      </li>
+    </ul>
+  </div>
+</body>
+
+</html>

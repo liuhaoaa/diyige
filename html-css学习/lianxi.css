@@ -1,0 +1,49 @@
+body {
+  min-width: 320px;
+  max-width: 540px;
+  font: 400 16px/1.5 PingFangSC-regular,Tahoma,"Lucida Grande",Verdana,"Microsoft Yahei",STXihei,hei;
+  color: #000;
+  -webkit-tap-highlight-color: transparent;
+  margin: 0 auto;
+  background: #fafafc;
+  overflow: hidden;
+}
+
+a{
+  text-decoration: none;
+}
+
+div{
+  box-sizing: border-box;
+}
+/* 搜索模块 */
+.search-index{
+  display: flex;
+  /* 固定定位跟父级没有关系  它以屏幕为准 */
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  /* 固定的盒子必须有宽度 */
+  width: 100%;
+  min-width: 320px;
+  max-width: 540px;
+  height: 44px;
+  /* background-color: pink; */
+}
+
+.search{
+  height: 26px;
+  border: 1px solid #ccc;
+  flex: 1;
+  margin: 7px 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0,0, 2);
+  border-bottom: 1px solid #ccc;
+}
+
+.user{ 
+  width: 44px;
+  height: 44px;
+  /* background-color: purple; */
+}

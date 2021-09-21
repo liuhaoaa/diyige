@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <div>
+      <input type="text" v-model="name">
+      <span v-show="name">你的名字是：{{name}}</span>
+    </div>
+    <div>
+      <input type="text" v-model="age">
+      <span v-show="age">你的年龄是：{{age}}</span>
+    </div>
+    <div>
+      <input type="text" v-model="sex">
+      <span v-show="sex">你的性别是：{{sex}}</span>
+      <!-- v-show 这个元素一直都在 要不给你显示要不显示      v-if 直接从DOM里面删除了-->
+    </div>
+  </div>
+  <script src="./vue.js"></script>
+  <script src="./0v-model指令.js"></script>
+</body>
+</html>

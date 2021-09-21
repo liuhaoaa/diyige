@@ -1,0 +1,17 @@
+.top {
+  width: 200px;
+  height: 200px;
+  background-color: pink;
+}
+.top a {
+  color: red;
+}
+.top a:hover {
+  color: orange;
+}
+.nav .logo {
+  color: salmon;
+}
+.nav::before {
+  content: '';
+}

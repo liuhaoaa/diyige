@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./chongzhi.css">
+</head>
+<style>
+  .box1 {
+    width: 190px;
+    height: 480px;
+    background-color: coral;
+    margin: 50px auto;
+  }
+  .box2 {
+    width: 190px;
+    height: 102px;
+    background-color: cornflowerblue;
+    position: relative;
+  }
+  .box3 {
+    width: 40px;
+    height: 40px;
+    background-color: crimson;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+  }
+  .box4 {
+    width: 106px;
+    height: 38px;
+    /* background-color: cyan; */
+    position: absolute;
+    top: 15px;
+    right: 10px;
+  }
+  .box4_top a {
+      font-size: 12px;
+      text-decoration: none;
+  }
+  .box4_b a {
+    font-size: 16px;
+    text-decoration: none;
+  }
+  .box4_b i {
+    display: inline-block;
+    height: 10px;
+    border: 1px #fff solid;
+  }
+  .box5 {
+    width: 190px;
+    height: 25px;
+    /* background-color: darkgoldenrod; */
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+  }
+  .box5 .box6 {
+    font-size: 12px;
+    color: #fff;
+    display: inline-block;
+    width: 70px;
+    height: 25px;
+    line-height: 25px;
+    text-decoration: none;
+    background-color: darkcyan;
+    border-radius: 45px;
+    margin: 0 5px;
+  }
+  .box5 .box7 {
+    font-size: 12px;
+    color: #fff;
+    display: inline-block;
+    width: 70px;
+    height: 25px;
+    line-height: 25px;
+    text-decoration: none;
+    background-color: darkcyan;
+    border-radius: 45px;
+    margin: 0 5px;
+  }
+
+  .guild {
+    width: 190px;
+    height: 130px;
+    background-color: darkkhaki;
+    position: relative;
+  }
+  .guild_top h5 {
+    /* display: inline-block; */
+    padding-top: 10px;
+    font-size: 14px;
+    margin-left: 15px;
+    color: #333;
+    margin-bottom: 8px;
+  }
+  .guild_top a {
+    /* display: inline-block; */
+    /* text-align: right; */
+    /* display: inline-block;*/
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    text-decoration: none;
+    font-size: 12px;
+  }
+  .guild_boo {
+    margin-left: 15px;
+  }
+  .guild_boo li {
+    height: 20px;
+  }
+  .guild_boo .guild_boo_l {
+    /* margin-left: 15px; */
+    display: inline-block;
+    text-align: center;
+    width: 35px;
+    height: 16px;
+    font-size: 10px;
+  background-color: pink;
+  }
+  .guild_boo .guild_boo_li {
+    display: inline-block;
+    text-align: center;
+    width: 35px;
+    height: 16px;
+    font-size: 10px;
+  background-color: pink;
+  }
+  .guild_boo a {
+    /* display: inline-block; */
+    font-size: 12px;
+  }
+</style>
+<body>
+  <div class="box1">
+    <!-- 头部 -->
+      <div class="box2">
+        <div class="box3"></div>
+        <div class="box4">
+          <div class="box4_top"><a href="#">Hi~欢迎登录京东!</a></div>
+          <span class="box4_b">
+            <a href="#">登录</a>
+            <i></i>
+            <a href="#">注册</a>
+          </span>
+        </div>
+        <div class="box5">
+        <a href="#" class="box6">新人福利</a>
+        <a href="#" class="box7">PLUS会员</a>
+      </div>
+      </div>
+    
+        <div class="guild">
+        <div class="guild_top">
+          <h5>京东快报</h5>
+          <a href="#">更多</a>
+        </div>
+        <ul class="guild_boo">
+        <li>
+          <a href="#"><span class="guild_boo_l">热评</span></a>
+          <a href="#">生活要有仪式感啊啊啊 </a>
+        </li>
+        <li>
+          <a href="#"> <span class="guild_boo_li">HOT</span></a>
+          <a href="#">生活要有仪式感，那你...</a>
+        </li>
+        <li>
+          <a href="#"><span class="guild_boo_l">热评</span></a>
+          <a href="#">生活要有仪式感，那你...</a>
+        </li>
+        <li>
+          <a href="#"><span class="guild_boo_li">HOT</span></a>
+            <a href="#">生活要有仪式感，那你...</a>
+        </li>
+        </ul>
+      </div>
+      </div>
+  </div>
+</body>
+</html>

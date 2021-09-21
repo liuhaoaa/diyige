@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // yield 传参、返回
+    function *show() {
+      alert('a');
+    
+      let a = yield;
+
+      alert('b');
+    }
+    let gen = show();
+    gen.next();  // 没法给yield传参
+    gen.next(); 
+  </script>
+</body>
+</html>

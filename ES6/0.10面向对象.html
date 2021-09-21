@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // function User(name,pass){
+    //   this.name=name;
+    //   this.pass=pass;
+    // }
+    // User.prototype.showName=function() {
+    //   alert(this.name);
+    // }
+    // User.prototype.showPass=function() {
+    //   alert(this.pass);
+    // }
+    // var u1 = new User('blue','123456')
+    // u1.showName();
+    // u1.showPass(); 
+
+    // ES6面向对象：
+    // 1. class 关键字、构造器和类分开了
+    // 2. class 里面直接加方法
+    class User{
+      constructor (name,pass){
+      this.name=name;
+      this.pass=pass;
+    }
+    showName(){
+      alert(this.name);
+    }
+    showPass(){
+      alert(this.pass);
+    }
+  }
+    var u1 = new User('blue','123456')
+    u1.showName();
+    u1.showPass(); 
+  </script>
+</body>
+</html>

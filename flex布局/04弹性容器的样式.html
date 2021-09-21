@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    ul{
+      width: 800px;
+      height: 800px;
+      border: 10px red solid;
+      /* 设置ul为弹性容器 */
+          display: flex;
+
+
+          /*
+            align-items: ;
+              - 元素在我们辅轴上如何对齐
+              - 元素间的关系
+                  - 可选值：
+                    stretch 默认值，将元素的长度设置为相同的值
+                    flex-start 元素不会拉伸，沿着辅轴起边对齐
+                    flex-end 沿着辅轴的终边对齐
+                    center 居中对齐
+           */
+            align-items:flex-end ;
+
+            /* align-content：辅轴空白空间的分布 */
+    }
+    li{
+      width: 200px;
+      background-color: #bfa;
+      font-size: 50px;
+      text-align: center;
+      line-height: 100px;
+    flex-shrink: 0;
+    }
+    li:nth-last-child(2){
+      background-color: pink;
+    }
+    li:nth-last-child(3){
+      background-color: orange;
+    }
+    </style>
+    
+    
+    
+    </head>
+    <body>
+        <ul>
+          <li>1</li>
+          <li>2
+            <div>2</div>
+          </li>
+          <li>3
+            <div>3</div>
+            <div>3</div>
+          </li>
+        </ul>
+    </body>
+    </html>

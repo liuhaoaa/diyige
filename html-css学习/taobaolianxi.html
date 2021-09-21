@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./chongzhi.css">
+    <style>
+        a:hover {
+            text-decoration: none;
+        }
+        
+        .box1 {
+            height: 40px;
+            background-color: cyan;
+        }
+        
+        .box2 {
+            width: 1000px;
+            margin: 0 auto;
+            background-color: darkcyan;
+            display: flex;
+        }
+        
+        .box3 {
+            width: 70%;
+        }
+        
+        ul {
+            display: flex;
+            flex-direction: row;
+        }
+        
+        ul li {
+            height: 100%;
+            flex: 1;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        ul li a {
+            display: block;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+        }
+        
+        ul li a:hover {
+            background-color: darkgray;
+        }
+        
+        .box4 {
+            width: 30%;
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            padding-right: 10px;
+        }
+        
+        .box4 i {
+            margin: 0 15px;
+        }
+        
+        .box4 {}
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        <div class="box2">
+            <div class="box3">
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">秒懂百科</a></li>
+                    <li><a href="#">特色百科</a></li>
+                    <li><a href="#">用户</a></li>
+                    <li><a href="#">知识专题</a></li>
+                    <li><a href="#">权威合作</a></li>
+                </ul>
+            </div>
+            <div class="box4">
+                <div class="box41"><a href="#">个人中心</a></div>
+                <i>|</i>
+                <div class="box41"><a href="#">下载百科app</a></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

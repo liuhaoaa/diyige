@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<div id="app">
+  <!-- <label>
+    男
+    <input v-model="sex" value="male" type="checkbox">
+  </label>
+  <label>
+    女
+    <input v-model="sex" value="female" type="checkbox">
+  </label>
+  <br>
+  {{sex}} -->
+  
+  <!-- <textarea v-model="article"></textarea> -->
+
+  <div>你来自哪里？</div>
+  <select v-model="from">
+    <option value="1">刘家村</option>
+    <option value="2">张庄</option>
+  </select>
+  {{from}}
+  <div>你要去哪里？</div>
+  <select v-model="dest" multiple>
+    <option value="1">刘家村</option>
+    <option value="2">张庄</option>
+    <option value="3">张庄</option>
+    <option value="4">张庄</option>
+    <option value="5">张庄</option>
+    <!-- Ctrl+鼠标单击   Shift+鼠标单击 -->
+  </select>
+  {{dest}}
+</div>
+  <script src="./vue.js"></script>
+  <script src="./5v-model指令.js"></script>
+</body>
+</html>

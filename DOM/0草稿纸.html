@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Vue 测试实例 - 菜鸟教程(runoob.com)</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <p>{{ message }}</p>
+        <div v-for="(v, k) in books" :key="k" @click.stop="handlEdit(v)">名称:{{v.name}},价格：{{v.prive}} <button @click="handleRemove(k)">删除</button></div>
+        <div>
+            名称：<input type="text" v-model="name"> 价格：
+            <input type="text" v-model="price">
+        </div>
+        <button @click="handleClick">按钮</button>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app', 
+            data: {
+                name: '',
+                price: 0, 
+                message: 'Hello Vue.js!',
+                books: [{
+                    name: 　 '大苏打',
+                    price: 20
+                }, {
+                    name: 　 '大苏打',
+                    price: 30
+                }, {
+                    name: 　 '大苏打',
+                    price: 4
+                }, ]
+            },
+            methods: {
+                handlEdit(item) {
+                    this.name = item.name
+                    this.price = item.price
+                },
+                handleClick() { 
+                    // this.message = '21312312's
+                    this.books.push({
+                        name: 　 '大苏打2',
+                        price: 450
+                    })
+                },
+                handleRemove(i) {
+                    this.books.splice(i, 1)
+                }
+            },
+            mounted() {
+                const books = []
+            }
+        })
+    </script>
+</body>
+
+</html>

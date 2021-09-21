@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // function User(name,pass){
+    //   this.name=name;
+    //   this.pass=pass;
+    // }
+    // User.prototype.showName=function() {
+    //   alert(this.name);
+    // }
+    // User.prototype.showPass=function() {
+    //   alert(this.pass);
+    // }
+    // function VipUser(name,pass,level){
+    //   User.call(this,name,pass);
+    //   this.level=level;
+    // }
+    // VipUser.prototype = new User();
+    // VipUser.prototype.constructor=VipUser;
+    // VipUser.prototype.showLevel=function() {
+    //   alert(this.level);
+    // }
+    // var v1 = new VipUser('blue','123456',3);
+
+    // v1.showName();
+    // v1.showPass();
+    // v1.showLevel(); 
+
+    function User(name,pass){
+      this.name=name;
+      this.pass=pass;
+    }
+    User.prototype.showName=function() {
+      alert(this.name);
+    }
+    User.prototype.showPass=function() {
+      alert(this.pass);
+    }
+
+    class VipUser extends User{
+      constructor(name,pass,leve1){
+      super(name,pass);   // super 超类==父类 
+
+      this.leve1 = leve1;
+    }
+    showLeve1(){
+      alert(this.leve1)
+    }
+    }
+    var v1 = new VipUser('blue','123456',3);
+
+v1.showName();
+v1.showPass();    
+v1.showLeve1(); 
+  </script>
+</body>
+</html>
